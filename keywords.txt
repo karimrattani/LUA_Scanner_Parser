@@ -1,0 +1,13 @@
+if
+then
+else
+while
+do
+for
+function
+end
+repeat
+until
+print
+
+
