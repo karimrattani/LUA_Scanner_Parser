@@ -1,5 +1,18 @@
-aba
-asdsad
 
-dsdsds
-aaad
+function f ( )
+    a = 15
+    b = 5
+    c = 3
+
+    w = a + b
+    print ( w )
+
+    x = a / c * b
+    print ( x )
+
+    y = b - a * c / b + a
+    print ( y )
+
+    z = 2 * a - 30 / c + b - 17
+    print ( z )
+end
