@@ -1,18 +1,29 @@
 
 function f ( )
-    a = 15
-    b = 5
-    c = 3
+	x = 2
+	y = 3
+	z = 5
 
-    w = a + b
-    print ( w )
+	m = x + y
+	print ( m )
 
-    x = a / c * b
-    print ( x )
+	n = x - y * z
+	print ( x )
 
-    y = b - a * c / b + a
-    print ( y )
+	q = x - y * z
+	print ( y )
 
-    z = 2 * a - 30 / c + b - 17
-    print ( z )
+	if ( q >= n ) then
+		n = n - 1
+	end
+	if ( q <= n ) then
+		n = n - 1
+	end
+	if ( q == n ) then
+		n = n - 1
+	end
+	if ( q ~= n ) then
+		n = n - 1
+	end
+	
 end
