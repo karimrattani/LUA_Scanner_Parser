@@ -1,16 +1,19 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.io.*;
 import java.util.HashMap;
 public class LexicalAnalyzer{
   ArrayList<token> tokenList;
   ArrayList<String> keywords;
+  ArrayList<String> errors;
   HashMap<String, tokenType> hashMap= new HashMap<String, tokenType>();
   public LexicalAnalyzer(String filename){
     assert(filename!=null); //check if empty filename
     
     //add all special keywords into array, keywords are define in text file with name keywords
     keywords = new ArrayList<String>();
+    errors = new ArrayList<String>();
     try{
       Scanner keywordFile = new Scanner(new File("keywords.txt"));
       while(keywordFile.hasNext()){//add keyword and tokentype associated with it.
@@ -99,7 +102,7 @@ public class LexicalAnalyzer{
       }else if(hashMap.containsKey(lexeme)){
         tok=hashMap.get(lexeme);
       }else{
-        throw new IllegalArgumentException("Invalid lexeme:"+lexeme+" on line "+LineNumber); 
+        errors.add("Invalid lexeme:"+lexeme+" on line "+LineNumber); 
       }
       //either special keyword or identifier
       
@@ -116,7 +119,7 @@ public class LexicalAnalyzer{
       if(checkDigit){
         tok=tokenType.LITERAL_INTEGAR_TKN; 
       }else{
-        throw new IllegalArgumentException("Invalid lexeme:"+lexeme+" on line "+LineNumber); 
+        errors.add("Invalid lexeme:"+lexeme+" on line "+LineNumber); 
       }
       //integer
       //compare if all lexeme are digit, if not error
@@ -151,7 +154,7 @@ public class LexicalAnalyzer{
       }
     }
     if(tok==null){
-      throw new IllegalArgumentException("Invalid lexeme:"+lexeme+" on line "+LineNumber); 
+      tok=tokenType.INVALID_TKN; 
     }
     return tok;
     
@@ -192,7 +195,20 @@ public class LexicalAnalyzer{
   }
   
   public ArrayList<token> getTokenList(){
+    if(!errors.isEmpty()){
+      this.printErrors();
+      System.exit(0);
+    }
     return this.tokenList; 
+  }
+  
+  public void printErrors(){
+   Iterator iterate = errors.iterator();
+   while(iterate.hasNext()){
+    String err = (String)iterate.next();
+    System.err.println(err);
+   }
+   
   }
 
   

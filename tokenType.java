@@ -10,6 +10,8 @@ public enum tokenType{
     LITERAL_INTEGAR_TKN,//digits
     LEFT_PAREN_TKN,//(
     RIGHT_PAREN_TKN,//)
+    INVALID_TKN,  
+    
     
       //all grammar from the doc
     
