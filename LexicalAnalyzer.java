@@ -197,7 +197,7 @@ public class LexicalAnalyzer{
   public ArrayList<token> getTokenList(){
     if(!errors.isEmpty()){
       this.printErrors();
-      System.exit(0);
+      throw new IllegalArgumentException("Invalid Lexeme");
     }
     return this.tokenList; 
   }
