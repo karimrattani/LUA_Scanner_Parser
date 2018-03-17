@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.io.*;
 import java.util.HashMap;
 public class LexicalAnalyzer{
-  ArrayList<token> tokenList;
+  LinkedList<token> tokenList;
   ArrayList<String> keywords;
   ArrayList<String> errors;
   HashMap<String, tokenType> hashMap= new HashMap<String, tokenType>();
@@ -33,7 +34,7 @@ public class LexicalAnalyzer{
     }
     
     //get all the tokens, compute it by line, and put it in token array.
-    tokenList = new ArrayList<token>();
+    tokenList = new LinkedList<token>();
     int LineNumber = 0;
     
     try{
@@ -194,7 +195,7 @@ public class LexicalAnalyzer{
     return false;
   }
   
-  public ArrayList<token> getTokenList(){
+  public LinkedList<token> getTokenList(){
     if(!errors.isEmpty()){
       this.printErrors();
       throw new IllegalArgumentException("Invalid Lexeme");
