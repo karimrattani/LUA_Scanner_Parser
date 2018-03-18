@@ -1,29 +1,29 @@
 
 function f ( )
-	x = 2
-	y = 3
-	z = 5
+ x = 2
+ y = 3
+ z = 5
 
-	m = x + y
-	print ( m )
+ m = x + y
+ print ( m )
 
-	n = x - y * z
-	print ( x )
+ n = x - y * z
+ print ( x )
 
-	q = x - y * z
-	print ( y )
+ q = x - y * z
+ print ( y )
 
-	if ( q >= n ) then
-		n = n - 1
-	end
-	if ( q <= n ) then
-		n = n - 1
-	end
-	if ( q == n ) then
-		n = n - 1
-	end
-	if ( q ~= n ) then
-		n = n - 1
-	end
-	
+ if ( q >= n ) then
+  n = n - 1
+ end
+ if ( q <= n ) then
+  n = n - 1
+ end
+ if ( q == n ) then
+  n = n - 1
+ end
+ if ( q ~= n ) then
+  n = n - 1
+ end
+ 
 end

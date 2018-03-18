@@ -44,6 +44,7 @@ public class LexicalAnalyzer{
         computeLine(LineNumber, line);  
         LineNumber++;
       }
+      tokenList.add(new token(LineNumber,"EOF",tokenType.EOF_TKN));
       scan.close();
     }catch(Exception e){
       System.out.println(e);
