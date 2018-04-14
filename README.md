@@ -1,11 +1,11 @@
+# CS 4308 – Concepts of Programming Languages
 # LUA_Scanner_Parser
-CS 4308 – Concepts of Programming Languages
 
-Course Project
+## Course Project
 The project for this course is the development of an interpreter of a language implemented in any of
 the following programming languages: C , C + + , Java, Python, or Ada.
 
-Interpreter Project
+## Interpreter Project
 This project consists of developing an interpreter for a minimal form (subset) of the Lua
 language. This minimal form of Lua has only 1 data type, integer, and the only identifiers are
 single letters. Lua is not case sensitive. The specification of the grammar is given below.
@@ -17,7 +17,7 @@ error discovered should cause an appropriate error message to be printed, and th
 should terminate. Run-time errors should also be detected with appropriate error messages being
 printed.
 
-Deliverables (see course schedule for due dates):
+## Deliverables (see course schedule for due dates):
 1. Module_3 – 1 st Deliverable
 Develop a complete scanner. Write a short report describing the work performed. Include the
 source program, input and output. You must show the execution of this program by using
@@ -35,12 +35,10 @@ execution of this program by using a relevant source line as input, the program 
 results after executing the statement recognize by the parser. Write a short report describing
 the work performed. Include the source program, input and output.
 
-CS4308 Project
-Grammar for the (subset of Lua) language
 
-Syntax Analyzer
-<program> → function id ( ) <block> end
-  
+## Grammar for the (subset of Lua) language
+
+<program> → function id ( ) <block> end  
 <block> → <statement> | <statement> <block>
   
 <statement> → <if_statement> | <assignment_statement> | <while_statement> | <print_statement> | <repeat_statement>
