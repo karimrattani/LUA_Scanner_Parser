@@ -6,9 +6,9 @@ public class repeatStatement extends Statement{
     this.blk=blk;
   }
   public void evaluate(){
-    do{
-      this.blk.process();
-    }while(this.expr.getExprResult());
+      while(expr.getExprResult()){
+     this.blk.process(); 
+    }
   } 
   
   

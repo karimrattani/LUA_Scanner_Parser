@@ -1,22 +1,26 @@
 function f ( )
-  a = 2
-  b = 3
-  repeat 
-       print ( a )
-       a = + a 1
-  until
-      == a b
-  
-  a = 2
+  a = 0
+  while < a 10 do
+  print ( a )
+  a = + a 1
+  end
 end
-  function f ( )
-  a = 2
-  b = 3
-  repeat 
-       print ( a )
-       a = + a 1
-  until
-      == a b
   
-  a = 2
+function g ( )
+  a = 10
+  b = 9
+  if == a b
+  then print ( a )
+  else print ( b )
+  end
+end
+  
+function h ( )
+  a = 10
+  b = 10
+  if == a b
+  then print ( a )
+  print ( b )
+  else print ( b )
+  end
 end
